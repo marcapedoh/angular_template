@@ -1,0 +1,36 @@
+<div class="login-wrapper">
+  <div class="login-container">
+    <div class="welcome-section">
+      <h1>Bienvenue!</h1>
+      <p>Inscrivez-vous pour accéder à votre compte et poursuivre votre voyage avec nous.</p>
+    </div>
+    <div class="login-form-section">
+      <h2>Connectez-vous</h2>
+      <form (ngSubmit)="onSubmit()" #signUpForm="ngForm">
+        <div class="input-group">
+          <label for="username">Nom d'utilisateur</label>
+          <input type="text" id="username" [(ngModel)]="username" name="username"
+            placeholder="Entrez votre nom d'utilisateur" #usernameInput="ngModel" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password"
+            placeholder="Entrez votre mot de passe" #passwordInput="ngModel" required />
+        </div>
+
+        <div class="input-group">
+          <label for="confirmPassword">Confirmez le Mot de passe</label>
+          <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword"
+            placeholder="Confirmez votre mot de passe" #confirmPasswordInput="ngModel" required />
+          <!-- Message d'erreur pour les mots de passe non correspondants -->
+          <p *ngIf="passwordMismatch" style="color: red;">Les mots de passe ne correspondent pas.</p>
+        </div>
+
+
+        <button type="submit" class="login-btn" [disabled]="!signUpForm.valid">Inscrivez-vous</button>
+        <p class="forgot-password" routerLink="/login">Se connecter</p>
+      </form>
+    </div>
+  </div>
+</div>
