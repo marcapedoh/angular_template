@@ -13,7 +13,6 @@ import { ManageAbonementComponent } from './components/manage-abonement/manage-a
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { ListAbonementComponent } from './components/list-abonement/list-abonement.component';
 
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
