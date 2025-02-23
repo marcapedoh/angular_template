@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-add-client',
+  templateUrl: './add-client.component.html',
+  styleUrls: ['./add-client.component.css']
 })
-export class DashboardComponent {
+export class AddClientComponent {
   constructor(private router: Router) {}
-
+  
   onSubmit() {
     console.log('Bouton cliqué !');
   }
@@ -16,7 +16,6 @@ export class DashboardComponent {
     this.router.navigate(['/add-client']);
   }
 
-  
   goToManageAbonement() {
     this.router.navigate(['/manage-abonement']);
   }
