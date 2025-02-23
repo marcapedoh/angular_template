@@ -7,11 +7,13 @@ import { ManageAbonementComponent } from './components/manage-abonement/manage-a
 import { AddClientComponent } from './components/add-client/add-client.component';
 import { ListAbonementComponent } from './components/list-abonement/list-abonement.component';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
+import { guardGuard } from './components/app-guard/guard.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [guardGuard]
   },
   {
     path: 'register',

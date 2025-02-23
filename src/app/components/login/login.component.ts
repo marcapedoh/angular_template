@@ -15,22 +15,18 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
-    this.errorMessage = ''; // Réinitialiser le message d'erreur
-
+    this.errorMessage = '';
     this.authService.login(this.username, this.password).subscribe({
       next: (response) => {
         if (response && response.token) {
-          console.log("✅ Connexion réussie", response);
-          localStorage.setItem('token', response.token); // Stocker le token JWT
+          localStorage.setItem('token', response.token);
 
-          this.router.navigate(['']); // Redirection vers le dashboard
+          this.router.navigate(['']);
         } else {
           this.errorMessage = "Réponse invalide du serveur.";
         }
       },
       error: (error) => {
-        console.error("❌ Erreur de connexion", error);
-
         if (error.status === 401) {
           this.errorMessage = "Nom d'utilisateur ou mot de passe incorrect.";
         } else if (error.status === 0) {

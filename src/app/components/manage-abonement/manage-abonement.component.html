@@ -239,8 +239,8 @@
                                     <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Ajouter un client</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
-                            </li>                            
-                            
+                            </li>
+
                             <li class=" ">
                                 <a routerLink="/manage-abonement" class="waves-effect waves-dark" (click)="onSubmit()">
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -262,12 +262,12 @@
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
-                            
-      
+
+
                         </ul>
                     </li>
                 </ul>
-                
+
             </div>
         </nav>
         <div class="pcoded-content">
@@ -302,49 +302,49 @@
                 <!-- Page body start -->
                 <div class="page-body">
                   <div class="row">
-                    
+
                   </div>
-                  
-                 
+
+
                   <div class="row">
                     <div class="col-sm-12">
                       <!-- Brand icon start -->
                       <div class="card">
                           <div class="card-header">
-                              <h5>Formulaire Client</h5>
+                              <h5>Formulaire Abonnement</h5>
                           </div>
                           <div class="card-block">
                               <form class="form-material">
                                   <!-- Champ prénom -->
                                   <div class="form-group form-default">
-                                      <input type="text" name="firstName" class="form-control" required="" value="John">
+                                      <input type="text" name="offerName" class="form-control" required="" [(ngModel)]="offerName">
                                       <span class="form-bar"></span>
-                                      <label class="float-label">Prénom</label>
+                                      <label class="float-label">Offer Name</label>
                                   </div>
-          
+
                                   <!-- Champ nom -->
                                   <div class="form-group form-default">
-                                      <input type="text" name="lastName" class="form-control" required="" value="Doe">
+                                      <input type="number" name="durationMonths" class="form-control" required=""[(ngModel)]="durationMonths">
                                       <span class="form-bar"></span>
-                                      <label class="float-label">Nom</label>
+                                      <label class="float-label">durationMonths</label>
                                   </div>
-          
+
                                   <!-- Champ numéro de téléphone -->
                                   <div class="form-group form-default">
-                                      <input type="text" name="phoneNumber" class="form-control" required="" value="+1234567890">
+                                      <input type="number" name="monthlyPrice" class="form-control" required="" [(ngModel)]="monthlyPrice">
                                       <span class="form-bar"></span>
-                                      <label class="float-label">Numéro de téléphone</label>
+                                      <label class="float-label">monthlyPrice</label>
                                   </div>
-          
+
                                   <!-- Champ date d'inscription -->
-                                  <div class="form-group form-default">
+                                  <!--div class="form-group form-default">
                                       <input type="date" name="registrationDate" class="form-control" required="" value="2024-01-01">
                                       <span class="form-bar"></span>
                                       <label class="float-label">Date d'inscription</label>
-                                  </div>
-          
+                                  </div-->
+
                                   <!-- Champ abonnement actif -->
-                                  <div class="form-group form-default">
+                                  <!--div class="form-group form-default">
                                       <div class="checkbox-fade fade-in-primary">
                                           <label class="check-task">
                                               <input type="checkbox" name="activeSubscription" value="true" checked>
@@ -352,14 +352,14 @@
                                                   <i class="cr-icon fa fa-check txt-default"></i>
                                               </span>
                                           </label>
-                                          <!-- Espacement ajouté ici -->
+
                                           <span class="float-label" style="margin-left: 10px;">Abonnement actif</span>
                                       </div>
-                                  </div>
-          
+                                  </div-->
+
                                   <!-- Bouton de validation -->
                                   <div class="form-group form-default">
-                                      <button type="submit" class="btn btn-primary btn-block">Valider</button>
+                                      <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Valider</button>
                                   </div>
                               </form>
                           </div>
