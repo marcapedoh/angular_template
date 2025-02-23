@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/components/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,7 @@ export class LoginComponent {
           console.log("✅ Connexion réussie", response);
           localStorage.setItem('token', response.token); // Stocker le token JWT
 
-          this.router.navigate(['/dashboard']); // Redirection vers le dashboard
+          this.router.navigate(['']); // Redirection vers le dashboard
         } else {
           this.errorMessage = "Réponse invalide du serveur.";
         }

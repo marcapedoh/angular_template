@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-manage-abonement',
+  templateUrl: './manage-abonement.component.html',
+  styleUrls: ['./manage-abonement.component.css']
 })
-export class DashboardComponent {
+export class ManageAbonementComponent {
   constructor(private router: Router) {}
 
   onSubmit() {

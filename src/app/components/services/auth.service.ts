@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export enum UserType {
@@ -15,8 +15,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  signUp(username: string, password: string, confirmPassword: string, userType: UserType = UserType.USER): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, { username, password, confirmPassword, userType });
+  signUp(username: string, password: string): Observable<any> {
+    const registerRequest={ username:username, userRole:"USER", password:password }
+   // console.log(registerRequest);
+    return this.http.post(`${this.apiUrl}/register`, registerRequest);
   }
 
   login(username: string, password: string): Observable<any> {

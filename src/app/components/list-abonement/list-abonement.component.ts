@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-list-abonement',
+  templateUrl: './list-abonement.component.html',
+  styleUrls: ['./list-abonement.component.css']
 })
-export class DashboardComponent {
+export class ListAbonementComponent {
   constructor(private router: Router) {}
 
   onSubmit() {
@@ -28,5 +28,4 @@ export class DashboardComponent {
   goToListAbonement() {
     this.router.navigate(['/list-abonement']);
   }
-
 }
